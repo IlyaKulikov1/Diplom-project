@@ -40,7 +40,7 @@ def test_search_field(driver):
 #     kennedy_page = KennedyPage(driver)
 #     assert kennedy_page.expected_result() == kennedy_page.additional_result(), 'Inconsistencies in the text'
 
-
+#1
 @allure.suite("toggle buttons")
 @allure.title("clicking on buttons")
 def test_toggle_buttons(driver):
