@@ -44,4 +44,16 @@ class MainPage(BasePage):
         with allure.step("Press to submit-button"):
             self.find_element(mpl.search_confirm).click()
 
+    def click_on_high_contrast(self):
+        if self.is_element_visible(mpl.btn_high_contrast_not_active):
+            self.find_element(mpl.btn_high_contrast_not_active).click()
 
+    def click_on_large_fonts(self):
+        if self.is_element_visible(mpl.btn_font_size_not_active):
+            self.find_element(mpl.btn_font_size_not_active).click()
+
+    def hight_contrast_result(self):
+        return BasePage.get_attr(self, mpl.btn_high_contrast_active_class)
+
+    def large_fonts_result(self):
+        return BasePage.get_attr(self, mpl.btn_font_size_active_class)

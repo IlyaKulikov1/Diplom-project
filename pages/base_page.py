@@ -1,4 +1,5 @@
 import allure
+import selenium
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver
@@ -97,3 +98,9 @@ class BasePage:
             возникает исключение TimeoutException"""
 
         self.is_element_visible(main_page_locators.header_logo).click()
+
+    def get_attr(self, *args):
+
+        by_name, by_value, attr = args[0]
+        element = self.find_element(by_name, by_value)
+        return element.get_attribute(f'{attr}')

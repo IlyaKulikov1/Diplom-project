@@ -21,10 +21,21 @@ header_change_lng = (By.XPATH, "//*[@id='menu-item-199']")
 header_menu = (By.XPATH, "//*[@id='mm-label']")
 
 # button high contrast not active
-btn_high_contrast = (By.XPATH, '//*[@class="acctoggle__contrast"]')
+btn_high_contrast_not_active = (By.XPATH, '//*[@class="acctoggle__contrast"]')
+
+# button high contrast active
+btn_high_contrast_active = (By.XPATH, '//*[@class="acctoggle__contrast active"]')
+#var for get_attr
+btn_high_contrast_active_class = (By.XPATH, '//*[@class="acctoggle__contrast active"]', 'class')
+btn_font_size_active_class = (By.XPATH, '//*[@class="acctoggle__fontsize active"]', 'class')
 
 # button Toggle Large Font Size not active
-btn_font_size = (By.XPATH, '//*[@class="acctoggle__fontsize"]')
+btn_font_size_not_active = (By.XPATH, '//*[@class="acctoggle__fontsize"]')
+
+# button Toggle Large Font Size not active
+btn_font_size_active = (By.XPATH, '//*[@class="acctoggle__fontsize active"]')
+
+
 
 # Past Presidents
 btn_past_presidents = (By.XPATH, "//*[@class='homepage-about-menu-item']//*[text()='Past Presidents']")
