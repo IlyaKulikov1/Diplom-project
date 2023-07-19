@@ -19,3 +19,5 @@ class KennedyPage(BasePage):
     def additional_result(self):
         return self.find_element(kl.kennedy_info).text
 
+
+

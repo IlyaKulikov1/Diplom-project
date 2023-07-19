@@ -1,14 +1,9 @@
-import time
-
 import allure
-# from pages.locators import main_page_locators
-# from pages.base_page import BasePage
 from pages.main_page import MainPage
 from pages.search_result_page import SearchResult
 from pages.past_presidents_page import PastPresidents
 from pages.kennedy_page import KennedyPage
 from conftest import driver
-
 
 
 @allure.suite("Header links")
@@ -30,17 +25,16 @@ def test_search_field(driver):
     assert search_results_page.check_for_search_results(), "Error with search result"
 
 
-# @allure.suite("Past Presidents")
-# @allure.title("clicking on card and checking inconsistencies in the text")
-# def test_kennedy_card(driver):
-#     past_president_page = PastPresidents(driver)
-#     time.sleep(2)
-#     past_president_page.open_past_presidents_page()
-#     past_president_page.open_kennedy_card()
-#     kennedy_page = KennedyPage(driver)
-#     assert kennedy_page.expected_result() == kennedy_page.additional_result(), 'Inconsistencies in the text'
+@allure.suite("Past Presidents")
+@allure.title("clicking on card and checking inconsistencies in the text")
+def test_kennedy_card(driver):
+    past_president_page = PastPresidents(driver)
+    past_president_page.open_past_presidents_page()
+    past_president_page.open_kennedy_card_with_js()
+    kennedy_page = KennedyPage(driver)
+    assert kennedy_page.expected_result() == kennedy_page.additional_result(), 'Inconsistencies in the text'
 
-#1
+
 @allure.suite("toggle buttons")
 @allure.title("clicking on buttons")
 def test_toggle_buttons(driver):

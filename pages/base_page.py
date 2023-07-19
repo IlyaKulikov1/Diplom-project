@@ -100,7 +100,9 @@ class BasePage:
         self.is_element_visible(main_page_locators.header_logo).click()
 
     def get_attr(self, *args):
-
+        """" Метод, который принимает 3 аргумента(by_name,
+         by_value и attr(атрибут, который мы хотим получить)
+        и возвращает Атрибут"""
         by_name, by_value, attr = args[0]
         element = self.find_element(by_name, by_value)
         return element.get_attribute(f'{attr}')
