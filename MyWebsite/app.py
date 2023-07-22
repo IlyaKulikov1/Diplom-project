@@ -37,7 +37,7 @@ def run_allure():
 def run():
     """ Эта функция запуская и отвечает за тесты страницы /example. """
 
-    cmd = ["/scripts/run_aut_lk.sh"]
+    cmd = ["../scripts/run_aut_lk.sh"]
     with subprocess.Popen(cmd, stdout=subprocess.PIPE,
                           stderr=subprocess.PIPE,
                           stdin=subprocess.PIPE,
