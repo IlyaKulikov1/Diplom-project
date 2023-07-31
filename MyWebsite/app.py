@@ -24,7 +24,7 @@ def error():
 def run_allure():
     """ Эта функция запуская и отвечает за генерацию отчета allure. """
 
-    cmd = ["./scriptsh/runallure.sh"]
+    cmd = ["C:/Program Files/Git/git-bash.exe", "-c", "../scripts/run_allure.sh"]
     with subprocess.Popen(cmd, stdout=subprocess.PIPE,
                           stderr=subprocess.PIPE,
                           stdin=subprocess.PIPE,
@@ -33,11 +33,23 @@ def run_allure():
     return render_template('welcome.html', text=out, json=out)
 
 
+@app.route("/run_api")
+def run_api():
+    """ Эта функция запуска и отвечает за тесты страницы /example. """
+
+    cmd = ["C:/Program Files/Git/git-bash.exe", "-c", "../scripts/run_api_tests.sh"]
+    with subprocess.Popen(cmd, stdout=subprocess.PIPE,
+                          stderr=subprocess.PIPE,
+                          stdin=subprocess.PIPE,
+                          universal_newlines=True) as result:
+        out = result.communicate()
+    return render_template('index.html', text=out, json=out)
+
 @app.route("/run")
 def run():
-    """ Эта функция запуская и отвечает за тесты страницы /example. """
+    """ Эта функция запуска и отвечает за тесты страницы /example. """
 
-    cmd = ["../scripts/run_aut_lk.sh"]
+    cmd = ["C:/Program Files/Git/git-bash.exe", "-c", "../scripts/run_aut_lk.sh"]
     with subprocess.Popen(cmd, stdout=subprocess.PIPE,
                           stderr=subprocess.PIPE,
                           stdin=subprocess.PIPE,
@@ -48,4 +60,3 @@ def run():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
