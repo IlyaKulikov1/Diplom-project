@@ -1,5 +1,3 @@
-import allure
-import selenium
 from selenium.webdriver.chrome.webdriver import WebDriver
 from selenium.webdriver.support import expected_conditions as EC
 from selenium import webdriver

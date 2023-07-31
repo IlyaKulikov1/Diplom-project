@@ -1,5 +1,3 @@
-import time
-
 import allure
 from selenium.common import NoSuchElementException
 from pages.base_page import BasePage

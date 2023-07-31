@@ -12,6 +12,7 @@ def test_header(driver):
     main_page = MainPage(driver)
     main_page.open_main_page()
     main_page.check_header_links()
+#assert
 
 
 @allure.suite("Search field")
@@ -38,6 +39,7 @@ def test_kennedy_card(driver):
 @allure.suite("toggle buttons")
 @allure.title("clicking on buttons")
 def test_toggle_buttons(driver):
+    """"""
     main_page = MainPage(driver)
     main_page.open_main_page()
     main_page.click_on_high_contrast()

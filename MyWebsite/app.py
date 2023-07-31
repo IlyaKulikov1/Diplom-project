@@ -35,7 +35,7 @@ def run_allure():
 
 @app.route("/run_api")
 def run_api():
-    """ Эта функция запуска и отвечает за тесты страницы /example. """
+    """ Эта функция запуска и отвечает за тесты Api страницы /example. """
 
     cmd = ["C:/Program Files/Git/git-bash.exe", "-c", "../scripts/run_api_tests.sh"]
     with subprocess.Popen(cmd, stdout=subprocess.PIPE,
@@ -47,7 +47,7 @@ def run_api():
 
 @app.route("/run")
 def run():
-    """ Эта функция запуска и отвечает за тесты страницы /example. """
+    """ Эта функция запуска и отвечает за Ui тесты страницы /example. """
 
     cmd = ["C:/Program Files/Git/git-bash.exe", "-c", "../scripts/run_aut_lk.sh"]
     with subprocess.Popen(cmd, stdout=subprocess.PIPE,
