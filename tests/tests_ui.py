@@ -39,7 +39,7 @@ def test_kennedy_card(driver):
 @allure.suite("toggle buttons")
 @allure.title("clicking on buttons")
 def test_toggle_buttons(driver):
-    """123"""
+    """4"""
     main_page = MainPage(driver)
     main_page.open_main_page()
     main_page.click_on_high_contrast()
