@@ -12,7 +12,7 @@ def test_header(driver):
     main_page = MainPage(driver)
     main_page.open_main_page()
     main_page.check_header_links()
-#assert
+
 
 
 @allure.suite("Search field")

@@ -29,7 +29,7 @@ class MainPage(BasePage):
                     link.click()
                     self.go_to_main_page()
                 else:
-                    print(f'Link {link.text} is not displayed')
+                    raise Exception("Visability error")
 
     def open_search_field(self):
         with allure.step("opening search field"):
