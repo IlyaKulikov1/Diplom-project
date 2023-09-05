@@ -1,6 +1,3 @@
-import time
-
-import allure
 from pages.base_page import BasePage
 from pages.locators import Kennedy_locators as kl
 
