@@ -1,4 +1,4 @@
-Hello! My name is Ilya  This is my graduation project
+Hello! My name is Ilya and this is my graduation project
 
 Below you can see the description and environment of my project
 
